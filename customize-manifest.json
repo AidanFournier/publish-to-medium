@@ -1,0 +1,12 @@
+{
+    "app": "26",
+    "scope": "ALL",
+    "desktop": {
+        "js": ["dist/KintoneCustomization.js"],
+        "css": ["dist/main.css"]
+    },
+    "mobile": {
+        "js": [],
+        "css": []
+    }
+}
