@@ -11,12 +11,12 @@ interface Event {
 
 // Type definitions for our medium POST API data
 interface PostBody {
-  title: string | null;
-  contentFormat: string | null;
-  content: string | null;
-  tags: Array<string> | null;
-  publishStatus: string | null;
-  notifyFollowers: boolean | null;
+  title: string;
+  contentFormat: string;
+  content: string;
+  tags: Array<string>;
+  publishStatus: string;
+  notifyFollowers: boolean;
 }
 
 (function () {
@@ -27,12 +27,12 @@ interface PostBody {
     const body: PostBody = {
 
       //TODO
-      title: null, // Article's title (from our Kintone record)
-      contentFormat: null, // 'markdown' or 'html' (writing format)
-      content: null, // Article's body (from our Kintone record)
-      tags: null, // String "tags" for our article. Optional!
-      publishStatus: null, // The status of our article: 'public', 'draft', or 'unlisted'
-      notifyFollowers: null // Sends a notification after publishing.
+      title: event.record.title.value, // Article's title (from our Kintone record)
+      contentFormat: "markdown", // 'markdown' or 'html' (writing format)
+      content: event.record.body.value, // Article's body (from our Kintone record)
+      tags: ["kintone", "medium", "low-code"], // String "tags" for our article. Optional!
+      publishStatus: "public", // The status of our article: 'public', 'draft', or 'unlisted'
+      notifyFollowers: false // Sends a notification after publishing.
     }
 
     // Create a button
