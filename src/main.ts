@@ -41,7 +41,7 @@ interface PostBody {
     mySpaceFieldButton.id = "publishToMedium"; // Our "Element ID" from our Blank Space in the Kintone App.
     // Give it an id & class (for CSS), and text on the button.
     mySpaceFieldButton.className = "uplaodButton";
-    mySpaceFieldButton.innerHTML = "Click To Publish!";
+    mySpaceFieldButton.innerHTML = "Publish To Medium!";
 
     // TODO
     // Run a function when the button is clicked
