@@ -38,16 +38,16 @@ interface PostBody {
     // Create a button
     const mySpaceFieldButton: HTMLElement = document.createElement('button');
     //TODO
-    mySpaceFieldButton.id = null; // Our "Element ID" from our Blank Space in the Kintone App.
+    mySpaceFieldButton.id = "publishToMedium"; // Our "Element ID" from our Blank Space in the Kintone App.
     // Give it an id & class (for CSS), and text on the button.
-    mySpaceFieldButton.className = null;
-    mySpaceFieldButton.innerHTML = null;
+    mySpaceFieldButton.className = "uplaodButton";
+    mySpaceFieldButton.innerHTML = "Click To Publish!";
 
     // TODO
     // Run a function when the button is clicked
     mySpaceFieldButton.onclick = function () {
       // We need to call our API POST function with request's body... 🧐
-      null
+      postToMedium(body);
     };
     // Set button on the Blank Space field
     kintone.app.record.getSpaceElement('publishToMedium')!.appendChild(mySpaceFieldButton);
